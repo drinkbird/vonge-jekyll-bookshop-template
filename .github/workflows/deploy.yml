@@ -36,15 +36,15 @@ jobs:
         run: npm run jekyll:install
 
       # Step 6: Build the Jekyll site
-      - name: Build Jekyll Site
-        run: bundle exec jekyll build --source ./site --destination ./_site
+      - name: Build Jekyll Site via npm
+        run: npm run build
 
       # Step 7: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ._site
+          publish_dir: ./_site
           # Optional: Uncomment and set if you want to deploy to a specific branch or folder
           publish_branch: gh-pages
           destination_dir: .
