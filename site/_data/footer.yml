@@ -2,14 +2,16 @@ footer_menu__settings:
   menu__items:
     - title: 'Home'
       url: '/'
+    - title: 'Posts'
+      url: '/posts/'
+    - title: 'Library'
+      url: '/library/'
     - title: 'Projects'
       url: '/projects/'
-    - title: 'Elements'
-      url: '/elements/'
     - title: 'About'
       url: '/about/'
-    - title: 'Blog'
-      url: '/blog/'
 
 copyright_text_html: >-
-  <p> 2021 &copy; <a href="/">Vonge</a>. Template by <a href="https://cloudcannon.com/">CloudCannon</a>.</p>
+  <p>2025 &copy; <a href="/">Lead, Engineered</a>: Transforming engineers into leaders</p>
+  <p><a href="{{ site.baseurl }}/privacy-policy">Privacy Policy & Disclosure</a></p>
+  <p><i>As an Amazon Associate I earn from qualifying purchases</i></p>

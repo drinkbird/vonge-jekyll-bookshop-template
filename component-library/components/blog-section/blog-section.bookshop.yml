@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: Blog
-  description: Blog Section with heading, a image, a description and a link
+  label: Articles
+  description: Articles Section with heading, a image, a description and a link
   icon: wysiwyg
   tags:
     - Content
