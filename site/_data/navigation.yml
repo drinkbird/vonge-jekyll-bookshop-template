@@ -4,13 +4,17 @@ menu__settings:
   menu__items:
     - title: 'Home'
       url: '/'
+    - title: 'Posts'
+      url: '/posts/'
+    - title: 'Library'
+      url: '/library/'
     - title: 'Projects'
       url: '/projects/'
-    - title: 'Blog'
-      url: '/blog/'
-    - title: 'Pages'
-      submenu:
-      - url: '/about/'
-        title: 'About'
-      - url: '/elements/'
-        title: 'Elements'
+    - title: 'About'
+      url: '/about/'
+      
+     # submenu:
+     # - url: '/about/'
+     #   title: 'About'
+     # - url: '/elements/'
+     #   title: 'Elements'
