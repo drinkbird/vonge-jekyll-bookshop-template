@@ -7,19 +7,19 @@
 
         <div class="{{c}}__inner text-center">
           <div class="{{c}}__info">
-            <h3 class="{{c}}__title">{{ newsletter_title }}</h3>
+            <h3 class="{{c}}__title">{{ site.data.newsletter.newsletter_title }}</h3>
             <div class="{{c}}__subtitle">
               <span id="ityped"></span>
             </div>
           </div>
 
           <div class="{{c}}__form">
-            <a href="{{ newsletter_url }}" target="_blank" class="c-button c-button--primary c-button--large" id="membedded-subscribe" type="submit" name="subscribe">{{ newsletter_button }}</a>
+            <a href="{{ site.data.newsletter.newsletter_url }}" target="_blank" class="c-button c-button--primary c-button--large" id="membedded-subscribe" type="submit" name="subscribe">{{ site.data.newsletter.newsletter_button }}</a>
           </div>
 
           <div class="{{c}}__info">
             <div class="{{c}}__subnote">
-              <span>{{ newsletter_subnote }}</span>
+              <span>{{ site.data.newsletter.newsletter_subnote }}</span>
             </div>
           </div>
         </div>
@@ -30,5 +30,5 @@
 <!-- end subscribe -->
 
 <script>
-  var itype_text = ['{{ newsletter_description }}'];
+  var itype_text = ['{{ site.data.newsletter.newsletter_description }}'];
 </script>

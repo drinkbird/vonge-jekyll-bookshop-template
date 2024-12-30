@@ -4,13 +4,6 @@
 {% include head.html %}
 
 <body>
-
-    {% assign newsletter_title = site.data.newsletter.newsletter_title %}
-    {% assign newsletter_description = site.data.newsletter.newsletter_description %}
-    {% assign newsletter_url = site.data.newsletter.newsletter_url %}
-    {% assign newsletter_subnote = site.data.newsletter.newsletter_subnote %}
-    {% assign newsletter_button = site.data.newsletter.newsletter_button %}
-
     {% if site.data.general_settings.google-analytics %}
         {% include google-analytics.html %}
     {% endif %}
