@@ -7,3 +7,4 @@ node_modules
 bookshop-live.js
 .DS_Store
 *.png:Zone.Identifier
+*.jpg:Zone.Identifier

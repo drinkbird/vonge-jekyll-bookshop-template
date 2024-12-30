@@ -1,0 +1,41 @@
+<!-- components/readmore.jekyll.html -->
+{% comment %}
+  ReadMore Component
+  Accepts a comma-separated string of book keys from library.yml and renders them.
+  Usage Example:
+    {% bookshop readmore books='azure-java-microservices,themythicalmanmonth' %}
+{% endcomment %}
+
+{% assign book_keys = include.books | split: "," %}
+<hr/>
+<section class="c-readmore">
+  <div class="container">
+    {% if book_keys %}<h4>Recommended further reading</h4>{% endif %}
+    <div class="row">
+      {% for key in book_keys %}
+        {% assign key = key | strip %}
+        {% assign book = site.data.library.books[key] %}
+        {% if book %}
+          <div class="col col-4 col-sm-6 col-xs-12">
+            <div class="book-inarticle text-center">
+              <a class="book-link" target="_blank" href="{{ book.url }}" aria-label="View '{{ book.title }}'{% if book.url contains 'amazon' %} on Amazon {% endif %} (affiliate link)">
+                {% if book.coverUrl %}
+                  <img class="img-responsive text-center" src="{{ book.coverUrl }}" alt="{{ book.title }}" />
+                {% elsif book.imgid %}
+                  <img class="img-responsive text-center" src="https://images-na.ssl-images-amazon.com/images/I/{{ book.imgid }}.jpg" alt="{{ book.title }}" />
+                {% elsif book.isbn %}
+                  <img class="img-responsive text-center" src="https://images-na.ssl-images-amazon.com/images/P/{{ book.isbn }}.jpg" alt="{{ book.title }}" />
+                {% endif %}
+                {{ book.title }}
+                {% if book.url contains 'amazon' %}
+                  <small>(Amazon affiliate link)</small>
+                {% endif %}
+              </a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<hr/>
