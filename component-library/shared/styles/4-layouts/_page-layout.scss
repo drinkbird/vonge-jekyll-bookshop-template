@@ -135,6 +135,7 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	gap: 16px;
 
 	.post__author-image {
 		position: relative;
@@ -169,9 +170,21 @@
 		font-weight: 600;
 	}
 
-	.post__date {
+	.post__author-title {
 		font-size: 12px;
 		line-height: 14px;
+	}
+
+	.post__meta-date {
+		flex-basis: 100%;
+		display: flex;
+		justify-content: left;
+		margin-top: 8px;
+
+		.post__date {
+			font-size: 12px;
+			line-height: 14px;
+		}
 	}
 }
 
