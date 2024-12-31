@@ -80,6 +80,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Testimonials Slider
   ============================ */
   if (document.querySelector(".my-slider")) {
+    const slides = document.querySelectorAll('.my-slider > *');
+    const numSlides = slides.length;
+    const randomIndex = Math.floor(Math.random() * numSlides);
+
     var slider = tns({
       container: ".my-slider",
       items: 3,
@@ -89,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       mouseDrag: true,
       autoplay: false,
       controlsContainer: "#customize-controls",
+      startIndex: randomIndex,
       responsive: {
         1024: {
           items: 3,
